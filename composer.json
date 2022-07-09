@@ -1,41 +1,40 @@
 {
-    "name": "wavvel/common-php",
-    "description": "Common php development components",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Sendy Halim",
-            "email": "",
-            "homepage": "https://github.com/sendyhalim"
-        }
-    ],
-    "homepage": "https://github.com/wavvel/common-php",
-    "keywords": ["Laravel", "CommonPhp"],
-    "require": {
-        "illuminate/support": "~9"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~9.0",
-        "orchestra/testbench": "~7"
-    },
-    "autoload": {
-        "psr-4": {
-            "Wavvel\\CommonPhp\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Wavvel\\CommonPhp\\Tests\\": "tests"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Wavvel\\CommonPhp\\CommonPhpServiceProvider"
-            ],
-            "aliases": {
-                "CommonPhp": "Wavvel\\CommonPhp\\Facades\\CommonPhp"
-            }
-        }
+  "name": "wavvel/common-php",
+  "description": "Common php development components",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sendy Halim",
+      "homepage": "https://github.com/sendyhalim"
     }
+  ],
+  "homepage": "https://github.com/wavvel/common-php",
+  "keywords": ["Laravel", "CommonPhp"],
+  "require": {
+    "illuminate/support": "~9"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~9.0",
+    "orchestra/testbench": "~7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wavvel\\CommonPhp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wavvel\\CommonPhp\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Wavvel\\CommonPhp\\CommonPhpServiceProvider"
+      ],
+      "aliases": {
+        "CommonPhp": "Wavvel\\CommonPhp\\Facades\\CommonPhp"
+      }
+    }
+  }
 }
