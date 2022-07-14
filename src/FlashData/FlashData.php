@@ -12,14 +12,12 @@ class FlashData {
    * just put the given flash data under "flash" key.
    */
   public function create($data): array {
-    return [
-      'flash' => $data
-    ];
+    return $data;
   }
 
   public function createErrors(array $data): array {
     return $this->create([
-      'errors' => $data
+      'flashErrors' => $data
     ]);
   }
 }
