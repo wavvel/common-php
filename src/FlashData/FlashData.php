@@ -11,11 +11,11 @@ class FlashData {
    * Create a common structure for flash data. As of now it will
    * just put the given flash data under "flash" key.
    */
-  public function create($data): array {
+  public function create($data): mixed {
     return $data;
   }
 
-  public function createErrors(array $data): array {
+  public function createErrors(mixed $data): array {
     return $this->create([
       'flashErrors' => $data
     ]);

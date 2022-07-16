@@ -12,20 +12,12 @@ class FlashDataTest extends TestCase {
     $this->flashData = new FlashData();
   }
 
-  public function test_create(): void {
-    $flash = $this->flashData->create('foo');
-
-    $this->assertEquals(['flash' => 'foo'], $flash);
-  }
-
   public function test_createErrors(): void {
     $flash = $this->flashData->createErrors(['bar']);
 
     $this->assertEquals(
       [
-        'flash' => [
-          'errors' => ['bar']
-        ],
+        'flashErrors' => ['bar']
       ],
       $flash
     );
