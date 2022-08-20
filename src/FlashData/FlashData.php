@@ -20,4 +20,10 @@ class FlashData {
       'flashErrors' => $data
     ]);
   }
+
+  public function createSuccess(mixed $data): array {
+    return $this->create([
+      'flashSuccess' => $data
+    ]);
+  }
 }
