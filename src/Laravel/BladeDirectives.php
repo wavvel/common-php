@@ -20,5 +20,16 @@ class BladeDirectives {
         ?>
       PHP_TEMPLATE;
     });
+
+    Blade::directive('human_date', function ($expression) {
+      $dateTimeCarbon = $expression;
+      // dd($dateTimeCarbon);
+
+      return <<<PHP_TEMPLATE
+        <?php
+          echo {$dateTimeCarbon}->format('Y-m-d');
+        ?>
+      PHP_TEMPLATE;
+    });
   }
 }
