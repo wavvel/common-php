@@ -59,6 +59,13 @@ class CommonPhpServiceProvider extends ServiceProvider {
       __DIR__.'/../config/common-php.php' => config_path('common-php.php'),
     ], 'common-php.config');
 
+    // Export the migration
+    if (! class_exists('CreateIntegrationLogTable')) {
+      $this->publishes([
+        __DIR__ . '/../database/migrations/create_posts_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_posts_table.php'),
+        // you can add any number of migrations here
+      ], 'migrations');
+    }
     // Publishing the views.
         /*$this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/vendor/wavvel'),
