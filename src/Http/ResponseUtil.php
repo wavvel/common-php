@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Wavvel\CommonPhp;
+namespace Wavvel\CommonPhp\Http;
 
 class ResponseUtil {
-  public function successPayload($data): array {
+  public static function successPayload($data): array {
     $response = [
       'data' => $data
     ];
@@ -11,7 +11,7 @@ class ResponseUtil {
     return $response;
   }
 
-  public function errorPayload(string $errorType, $errorMessage): array {
+  public static function errorPayload(string $errorType, $errorMessage): array {
     return [
       'error' => [
         'type' => $errorType,
